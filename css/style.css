@@ -15,6 +15,7 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
   width: 100%;
+  height: 100%;
 }
 h1{
   background-color: var(--blue);
@@ -39,8 +40,8 @@ header {
  display: flex;
  justify-content:space-between;
  align-content: center;
- background-color: rgb(51, 55, 55);
- padding: 30px;
+ background-color: var(--gray);
+ padding: 20px;
 }
 
 li {
@@ -64,7 +65,7 @@ a {
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
   background-image: url("../images/02-hero-bg.jpg");
-  height: 300px;
+  height: 200px;
   margin-bottom: 50px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -72,10 +73,12 @@ a {
 
 .hero-banner h3 {
   display: grid;
-  justify-content:end;
-  color: gray;
+  grid-row-start: 3;
+  color: var(--gray);
   background-color: var(--blue);
   justify-items: end;
+  background-size: contain;
+  width: fit-content;
 }
 
 /* About me Section */
@@ -86,6 +89,7 @@ a {
   grid-template-rows:  300px;
   row-gap: 20px;
   column-gap: 30px;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -127,10 +131,11 @@ p {
   display: grid;
   grid-area: 'work-image';
   background-image: url("../images/02-portfolio-4.jpg");
-  background-size:contain;
+  background-size:cover;
   width: 100%;
+  margin-right:20px;
   height: auto;
-  border: 3px solid var(--blue);
+  border: 6px solid var(--blue);
 }
 
 /* Work-Small-img-section */
@@ -151,7 +156,7 @@ p {
   background-image: url("../images/02-portfolio-1.jpg");
   background-size:cover;
   grid-column-start: 2;
-  border: 3px solid var(--blue);
+  border: 6px solid var(--blue);
 }
 
 #small-img-2 {
@@ -160,7 +165,7 @@ p {
   background-image: url("../images/02-portfolio-3.jpg");
   background-size:cover;
   grid-column-start: 3;
-  border: 3px solid var(--blue);
+  border: 6px solid var(--blue);
 }
 
 #small-img-3 {
@@ -169,7 +174,7 @@ p {
   background-image: url("../images/02-portfolio-4.jpg");
   background-size:cover;
   grid-column-start: 2;
-  border: 3px solid var(--blue);
+  border: 6px solid var(--blue);
 }
 #small-img-4 {
   display: grid;
@@ -177,7 +182,7 @@ p {
   background-image: url("../images/02-run-buddy.jpg");
   background-size:cover;
   grid-column-start: 3;
-  border: 3px solid var(--blue);
+  border: 6px solid var(--blue);
 }
 
 /* Contact-page-section */
@@ -196,22 +201,37 @@ p {
   flex-wrap: wrap;
   text-decoration: underline;
   padding: 0;
-
-
 }
 
-/* Responsive  */
+/* ---------- Media Queries ------------ */
+
+/* Responsive Main */
 @media only screen and (max-width: 800px) {
   .page-section, .page-section-contact, .contact-footer {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
 
   }
 }
 
 /* Work-Section */
+
+@media only screen and (max-width: 800px) { 
+.page-section-work {
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows:  50px 90px;
+  grid-template-areas: 'work' 'work-image';
+  margin: 10px;
+}
+}
+
+@media only screen and (max-width: 800px) { 
+   .page-section-work {
+      background-size: cover;
+    }
 
 @media only screen and (max-width: 800px) { 
 .page-section-works-small {
@@ -224,7 +244,7 @@ p {
 }
 }
 
-@media only screen and (max-width: 800px) { 
+@media only screen and (max-width: 600px) { 
 #small-img-1 {
   grid-row-start: 1;
   grid-column-start: 1;
@@ -233,7 +253,7 @@ p {
 
 }
 
-@media only screen and (max-width: 800px) { 
+@media only screen and (max-width: 600px) { 
   #small-img-2 {
     grid-column-start: 2;
    grid-row-start: 2;
@@ -249,7 +269,7 @@ p {
       margin: 10px;
     }
 
-  @media only screen and (max-width: 800px) { 
+  @media only screen and (max-width: 600px) { 
     #small-img-4 {
       grid-column-start: 1;
       grid-column-end: 4;
@@ -257,13 +277,6 @@ p {
  
     }  
 
-@media only screen and (max-width: 800px) { 
-.page-section-work, #work {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-}
 
 @media only screen and (max-width: 800px) { 
   body {
@@ -271,21 +284,38 @@ p {
   }
 }
 
-
-/* @media only screen and (max-width: 800px) { 
-#work-image {
-    display: flex;
-} */
-
-
 /* Move separator */
 @media only screen and (max-width: 800px) { 
   h2 {
-    border-bottom: 5px solid gray;
-    border-right: 0px;
-  padding-right: 5px
+    display: flex;
+    justify-content: flex-start;
   }
 }
 
+/* Responsive Header */
 
+@media only screen and (max-width: 800px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    height: 55px;
+    padding-top: 0px;
+  }
+}
 
+@media only screen and (max-width: 800px) {
+  h1 {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+nav ul {
+  display: inline-flex;
+    font-size: 12px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0px;
+}
+}
