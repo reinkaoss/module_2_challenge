@@ -8,6 +8,7 @@
 * {
   box-sizing:content-box;
 }
+/* * { border: 1px solid red !important; } */
 
 body {
   margin: 0 auto;
@@ -80,6 +81,8 @@ a {
   justify-items: end;
   background-size: contain;
   width: fit-content;
+  height: fit-content;
+  grid-column-start: none;
 }
 
 /* About me Section */
@@ -131,20 +134,47 @@ p {
 #work-title {
   margin-bottom: -10px;
 }
+
+h4 {
+  position: absolute;
+  left: 390px;
+  bottom: -372px;
+  background-color: var(--blue);
+}
+
 .item1 {
   position: absolute;
-  right: -50px;
   top: 100px;
   padding: 25px;
   max-width: 550px;
   z-index: 100;
 
 }
+.item3 {
+  position: absolute;
+  padding: 25px;
+  max-width: 550px;
+  z-index: 100;
+}
+
+.item4 {
+  position: absolute;
+  padding: 25px;
+  max-width: 550px;
+  z-index: 100;
+}
+
+.item5 {
+  position: absolute;
+  padding: 25px;
+  max-width: 550px;
+  z-index: 100;
+}
 
 .item1 h4 {
   position: relative;
-  left: -865px;
-  bottom: -886px;
+  left: 468px;
+  bottom: -891px;
 }
 
 .item2 h4 {
@@ -153,6 +183,30 @@ p {
   bottom:-98px;
   width: max-content;
 }
+
+.item3 h4 {
+  position: relative;
+  left: 932px;
+  bottom: -71px;
+  width: max-content;
+  height: max-content;
+} 
+
+.item4 h4 {
+  position: relative;
+  left: 457px;
+  bottom: -241px;
+  width: max-content;
+  height: max-content;
+} 
+
+.item5 h4 {
+  position: relative;
+  left: 934px;
+  bottom: -245px;
+  width: max-content;
+  height: max-content;
+} 
 
 #work-image {
   display: grid;
@@ -165,12 +219,7 @@ p {
   border: 6px solid var(--blue);
 }
 
-h4 {
-  position: absolute;
-  left: 390px;
-  bottom: -372px;
-  background-color: var(--blue);
-}
+
 
 /* Work-Small-img-section */
 .page-section-works-small {
@@ -246,7 +295,7 @@ h4 {
 /* ---------- Media Queries ------------ */
 
 /* Responsive Main */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
   .page-section, .page-section-contact, .contact-footer {
     display: flex;
     flex-direction: column;
@@ -258,7 +307,7 @@ h4 {
 
 /* Work-Section */
 
-@media only screen and (max-width: 800px) { 
+@media only screen and (max-width: 600px) { 
 .page-section-work  {
   display: grid;
   grid-template-columns: 2fr;
@@ -268,35 +317,62 @@ h4 {
 }
 }
 
-@media only screen and (max-width: 800px) { 
+@media only screen and (max-width: 600px) { 
 .item1 h4 {
   position: relative;
-  left: -294px;
-    bottom: -704px;
+  left: -20px;
+  bottom: -707px;
 }
 
-@media only screen and (max-width: 800px) { 
+@media only screen and (max-width: 600px) { 
   .item2 {
     position: absolute;
   }
 
-@media only screen and (max-width: 800px) { 
+@media only screen and (max-width: 600px) { 
     .item2 h4{
       position: relative;
       left: 14px;
       bottom: -36px;
       width: max-content;
     }
-  
+
+@media only screen and (max-width: 600px) { 
+  .item3 h4{
+    position: relative;
+    left: -10px;
+    bottom: -122px;
+    width: max-content;
+  }
+ }
+
+@media only screen and (max-width: 600px) { 
+  .item4 h4{
+    position: relative;
+    left: -12px;
+    bottom: -233px;
+    width: max-content;
+  }
+ }
+
+ @media only screen and (max-width: 600px) { 
+  .item5 h4{
+    position: relative;
+    left: -13px;
+    bottom: -344px;
+    width: max-content;
+  }
+ }
 
 
-@media only screen and (max-width: 800px) { 
+
+@media only screen and (max-width: 600px) { 
    .page-section-work {
       background-size: cover;
     }
 }
 
-@media only screen and (max-width: 800px) { 
+@media only screen and (max-width: 600px) { 
 .page-section-works-small {
   display: grid;
   grid-template-columns: (auto-fit, minmax(1fr));
@@ -341,14 +417,14 @@ h4 {
     }  
 
 
-@media only screen and (max-width: 800px) { 
+@media only screen and (max-width: 600px) { 
   body {
     width: 100%;
   }
 }
 
 /* Move separator */
-@media only screen and (max-width: 800px) { 
+@media only screen and (max-width: 600px) { 
   h2 {
     display: flex;
     justify-content: flex-start;
@@ -359,23 +435,23 @@ h4 {
 
 /* Responsive Header */
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
   header {
     display: flex;
     flex-direction: column;
-    height: 55px;
+    height: 65px;
     padding-top: 0px;
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
   h1 {
     display: flex;
     justify-content: center;
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
 nav ul {
   display: inline-flex;
     font-size: 12px;
