@@ -23,8 +23,11 @@ Screenshot of the landing page on a smaller screen.
 Screenshot of 'work' section on a smaller screen.
 ![Small_Screen](/images/Screenshot3.jpeg?raw=true "Optional Title")
 
-Reduced screenshot of the landing page on a laptop screen.
-![Desktop_Screen](/images/Screenshot2.jpeg?raw=true "Optional Title")
+Screenshot of the landing page on a laptop screen.
+![Desktop_Screen](/images/Screenshot2.jpg?raw=true "Optional Title")
+
+Screenshot of the Work/Contact me section on a laptop screen.
+![Desktop_Screen](/images/Screenshot4.jpg?raw=true "Optional Title")
 
 ## Credits
 
